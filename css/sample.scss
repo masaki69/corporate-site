@@ -1,18 +1,20 @@
 @charset "utf-8";
 
 html {
-  font-size: 62.5%;
+font-size: 62.5%;
 }
 
 @mixin fontsize($size: 24, $base: 10) {
-  font-size: $size + px;
-  font-size: ($size / $base) * 1rem;
+font-size: $size + px;
+font-size: ($size / $base) * 1rem;
 }
 
 $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
 $blue1 : #42b9d0;
 $blue2 : #339fd1;
 $gray_blue : #eaf2f4;
+
+/**************************************/
 
 header{
 
@@ -24,23 +26,54 @@ header{
   }
 
   @media (max-width: 550px) {
+
     .logo{
       width: 190px;
     }
 
     .navi{
+
       width:40px;
       float: right;
     }
+
   }
 
+  .sp_navi_li{
+    width: 180px;
+    position: absolute;
+    top:50px;
+    right:2%;
+    border: 1px solid #eee;
+    background: white;
+    margin: 0;
+    padding:0;
+    display: none;
+    z-index: 100;
 
-  @media (min-width: 551px) {
+    li{
+
+      list-style: none;
+      margin: 0;
+      padding:0;
+
+      a{
+        display: block;
+        padding: 10px 8px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media (min-width: 550px) {
+
     .sp_navi{
       display: none;
     }
-    
-     #header_in{
+
+    #header_in{
       padding: 15px 0 10px 0;
     }
 
@@ -133,45 +166,21 @@ header{
 
     }
     // .pc_navi_li
-    
+
   }
-  // min-width: 551px
-  
+  // min-width: 550px
+
   @media (max-width: 550px) {
+
     .pc_navi{
       display: none;
     }
+
   }
-  // max-width: 550px
+
+  // min-width: 550px
 
 
-  .sp_navi_li{
-    width: 180px;
-    position: absolute;
-    top:50px;
-    right:2%;
-    border: 1px solid #eee;
-    background: white;
-    margin: 0;
-    padding:0;
-    display: none; //追加
-    z-index: 100; //追記
-
-    li{
-
-      list-style: none;
-      margin: 0;
-      padding:0;
-
-      a{
-        display: block;
-        padding: 10px 8px;
-        border-bottom: 1px solid #eee;
-        font-size: 14px;
-        text-decoration: none;
-      }
-    }
-  }
 }
 // header
 
@@ -191,8 +200,8 @@ header{
     background-image: url("../images/top/cover@2x.jpg");
 
   }
-  
-   @media (min-width: 551px) {
+
+  @media (min-width: 550px) {
 
     text-align: left;
     height:420px;
@@ -203,7 +212,7 @@ header{
       margin-left: 70px;
     }
   }
-  // min-width: 551px
+  // min-width: 550px
 
 }
 
@@ -211,10 +220,10 @@ header{
 
   padding-top:20px;
 
-  @media (min-width: 551px) {
+  @media (min-width: 550px) {
     padding-top: 30px;
   }
-  // min-width: 551px
+  // min-width: 550px
 
 
   .columns{
@@ -233,7 +242,7 @@ header{
       margin-top: 10px;
     }
 
-    @media (min-width: 551px) {
+    @media (min-width: 550px) {
 
       .service_title{
         @include fontsize(16);
@@ -245,7 +254,7 @@ header{
       }
 
     }
-    // min-width: 551px
+    // min-width: 550px
 
   }
   // .columns
@@ -257,7 +266,7 @@ header{
 
   background-color:$gray_blue;
 
-  @media (min-width: 551px) {
+  @media (min-width: 550px) {
 
     .container{
 
@@ -266,7 +275,7 @@ header{
     }
 
   }
-  // min-width: 551px
+  // min-width: 550px
 
   .news_title{
 
@@ -295,20 +304,27 @@ header{
   }
   // .news_lists
 
-  @media (min-width: 551px) {
+  @media (min-width: 550px) {
 
     .news_title{
+
+      text-align: center;
       @include fontsize(22);
+      color: $blue1;
       padding: 50px 0 41px 0;
+      letter-spacing: 0.2rem;
     }
 
     .news_lists{
 
       li{
+        list-style: none;
         @include fontsize(14);
         margin-bottom: 20px;
 
         span{
+          color: $blue1;
+          font-weight: bold;
           display: inline;
           margin-bottom: 0px;
         }
@@ -318,7 +334,7 @@ header{
     // .news_lists
 
   }
-  // min-width: 551px
+  // min-width: 550px
 
 
 }
@@ -387,7 +403,7 @@ footer{
 
 
 
-  @media (min-width: 551px) {
+  @media (min-width: 550px) {
 
     padding-top: 30px;
 
@@ -449,7 +465,7 @@ footer{
     }
 
   }
-  // min-width: 551p
+  // min-width: 550p
 
 
 }
@@ -459,3 +475,4 @@ h1{
   margin: 0;
   padding: 0;
 }
+
